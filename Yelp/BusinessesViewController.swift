@@ -12,9 +12,14 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
     
     var businesses: [Business]!
 
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        navigationItem.titleView = searchBar
         
         tableView.dataSource = self
         tableView.delegate = self
